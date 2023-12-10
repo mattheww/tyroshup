@@ -9,12 +9,9 @@
 }
 
 // Use like #t2("trait")[traits]
-// FIXME: this is sometimes leaving extra whitespace afterwards, eg with
-//  #t2("trait")[traits].
-// there is a space before the .
-#let t2(term_name, body) = [
-    #link(label(term_name), text(blue, body))
-]
+#let t2(term_name, body) = {
+    link(label(term_name), text(blue, body))
+}
 
 #let rubric(body) = {
     set block(above: 1.5em)
